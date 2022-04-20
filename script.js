@@ -10,7 +10,7 @@
 if (navigator.serviceWorker) {
   navigator.serviceWorker.register("/ICS2O-Unit-6-01-HTML/sw.js", {
     scope: "/ICS2O-Unit-6-01-HTML/",
-  })
+  });
 }
 
 /**
@@ -18,12 +18,12 @@ if (navigator.serviceWorker) {
  */
 function convertClicked() {
   //input
-  const fahrenheit = parseInt(document.getElementById("fahrenheit").value)
+  const fahrenheit = parseInt(document.getElementById("fahrenheit").value);
 
   //process
-  const celsius = ((fahrenheit - 32) * 5) / 9
+  const celsius = ((fahrenheit - 32) * 5) / 9;
 
   //output
   document.getElementById("temperature-in-celsius").innerHTML =
-    "The temperature is: " + celsius.toFixed(2) + " °C!"
+    "The temperature is: " + celsius.toFixed(2) + " °C!";
 }
