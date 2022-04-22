@@ -16,14 +16,14 @@ if (navigator.serviceWorker) {
 /**
  * This function gets the users input and converts the value to celsius
  */
-function convertClicked() {
+function guessClicked() {
   //input
-  const fahrenheit = parseInt(document.getElementById("fahrenheit").value);
+  const fahrenheit = parseInt(document.getElementById("slider").value);
 
   //process
   const celsius = ((fahrenheit - 32) * 5) / 9;
 
   //output
-  document.getElementById("temperature-in-celsius").innerHTML =
-    "The temperature is: " + celsius.toFixed(2) + " °C!";
+  document.getElementById("guess-result").innerHTML =
+    Math.floor(Math.random() * 6) +1 ;
 }

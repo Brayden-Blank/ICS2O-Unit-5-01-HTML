@@ -28,34 +28,29 @@
         </div>
       </header>
       <main class="mdl-layout__content">
-        <table>
-          <tr>
-            <th>
-              <h2> Formula: Celsius = (Fahrenheit - 32) x 5/9</h2>
-            </th>
-          </tr>
-        </table>
-        <p> Temperature (°F): </p>
-        <!-- Numeric Textfield with Floating Label -->
-      <form action="#">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="fahrenheit">
-          <label class="mdl-textfield__label" for="fahrenheit">Input value...</label>
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
-      </form>
+        <p> Input Your Guess: </p>
+        <div id="slider-value"> 
+          Slider's Value:
+          ?
+        </div>  
+        <!-- Slider -->
+       <label>
+          <input id = "slider" class="mdl-slider mdl-js-slider" type="range"
+          min="0" max="10" value="2" tabindex="0"
+          onchange = "updateSliderValue(this.value)">
+        </label>
         <!-- Raised button with ripple -->
         <button
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"   
-          onclick="convertClicked()"
+          onclick="guessClicked()"
           >
-          Convert to Celsius
+          Input Your Guess!
         </button>
         <br>
         <br>
         <br>
         <div id="user-info">
-          <div id="temperature-in-celsius"></div>
+          <div id="guess-result"></div>
         </div>
       </main>
     </div>
