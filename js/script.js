@@ -25,5 +25,5 @@ function guessClicked() {
 
   //output
   document.getElementById("guess-result").innerHTML =
-    Math.floor(Math.random() * 6) +1 ;
+    Math.floor(Math.random() * 6) + 1;
 }
